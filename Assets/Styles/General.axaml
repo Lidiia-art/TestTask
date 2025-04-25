@@ -143,7 +143,7 @@
   </Style>
 
   <Style Selector="ToggleButton:checked /template/ ContentPresenter#PART_ContentPresenter">
-    <Setter Property="Background" Value="Green"/>
+    <Setter Property="Background" Value="LightGreen"/>
   </Style>
 
   <Style Selector="Button.onSwitch">
