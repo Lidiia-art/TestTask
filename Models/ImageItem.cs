@@ -18,6 +18,9 @@ namespace testTask.Models
         public Bitmap? icon;
 
         private string? iconPath;
+
+        [ObservableProperty]
+        public string group;
         public string? IconPath
         {
             get => iconPath;

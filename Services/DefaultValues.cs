@@ -16,24 +16,28 @@ namespace testTask.Services
         {
             new ImageItem
             {
-                IsChecked = true,
                 IconPath = "AoG.png",
+                Group="Group1"
             },
             new ImageItem
             {
                 IconPath = "Same.png",
+                Group="Group1"
             },
             new ImageItem
             {
                 IconPath = "Challenger.png",
+                Group="Group1"
             },
             new ImageItem
             {
                 IconPath = "JohnDeere.png",
+                Group="Group1"
             },
             new ImageItem
             {
                IconPath = "JCB.png",
+               Group="Group1"
             },
         };
 
@@ -41,32 +45,78 @@ namespace testTask.Services
         {
             new ImageItem
             {
-                IsChecked = true,
                 IconPath = "AoG.png",
+                Group="Group2"
             },
             new ImageItem
             {
                 IconPath = "JCB.png",
+                Group="Group2"
             },
             new ImageItem
             {
                 IconPath = "Massey.png",
+                Group="Group2"
             },
             new ImageItem
             {
                 IconPath = "JohnDeere.png",
+                Group="Group2"
             },
             new ImageItem
             {
                 IconPath = "NewHolland.png",
+                Group="Group2"
             },
             new ImageItem
             {
                 IconPath = "Challenger.png",
+                Group="Group2"
             },
              new ImageItem
             {
                 IconPath = "NewHolland.png",
+                Group="Group2"
+            }
+        };
+
+
+        public static ObservableCollection<ImageItem> GetGroup3() => new()
+        {
+            new ImageItem
+            {
+                IconPath = "AoG.png",
+                Group="Group3"
+            },
+            new ImageItem
+            {
+                IconPath = "JCB.png",
+                Group="Group3"
+            },
+            new ImageItem
+            {
+                IconPath = "Massey.png",
+                Group="Group3"
+            },
+            new ImageItem
+            {
+                IconPath = "JohnDeere.png",
+                Group="Group3"
+            },
+            new ImageItem
+            {
+                IconPath = "NewHolland.png",
+                Group="Group3"
+            },
+            new ImageItem
+            {
+                IconPath = "Challenger.png",
+                Group="Group3"
+            },
+             new ImageItem
+            {
+                IconPath = "NewHolland.png",
+                Group="Group3"
             }
         };
 

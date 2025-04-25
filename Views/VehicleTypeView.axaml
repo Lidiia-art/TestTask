@@ -127,7 +127,7 @@
         <ColumnDefinition Width="auto"/>
       </Grid.ColumnDefinitions>
 
-      <ItemsControl  ItemsSource="{Binding Group1}" Height="400" HorizontalAlignment="Center" IsVisible="{Binding IsChecked3}"><ItemsControl.ItemsPanel>
+      <ItemsControl  ItemsSource="{Binding Group3}" Height="400" HorizontalAlignment="Center" IsVisible="{Binding IsChecked3}"><ItemsControl.ItemsPanel>
           <ItemsPanelTemplate>
             <WrapPanel Orientation="Vertical" ItemWidth="80" ItemHeight="80"/>
           </ItemsPanelTemplate>

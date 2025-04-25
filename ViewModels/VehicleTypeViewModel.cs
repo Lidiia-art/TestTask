@@ -33,18 +33,23 @@ namespace testTask.ViewModels
 
         [ObservableProperty]
         private Bitmap currentImage;
+
+
+        private string currentGroup;
+
         public ICommand DecreaseCommand1 { get; }
         public ObservableCollection<ImageItem> Group1 { get; }
         public ObservableCollection<ImageItem> Group2 { get; }
 
         public ObservableCollection<ImageItem> Group3 { get; }
-    
+
 
         public VehicleTypeViewModel()
         {
             Group1 = DefaultValues.GetGroup1();
             Group2 = DefaultValues.GetGroup2();
-            CurrentImage = Group1[0].icon;
+            Group3 = DefaultValues.GetGroup3();
+            CurrentImage = DefaultValues.image;
         }
 
         [RelayCommand]
@@ -64,26 +69,76 @@ namespace testTask.ViewModels
                 Opacity -= 0.2;
             }
         }
-    
+
         [RelayCommand]
         private void NoImage()
         {
             if (CurrentImage != DefaultValues.image || IsChecked1 == true)
             {
-                CurrentImage = DefaultValues.image;
                 IsChecked1 = false;
                 IsChecked2 = false;
                 IsChecked3 = false;
+
+                cleanGroup(currentGroup);
             }
             else
             {
                 IsChecked1 = true;
             }
+
+            CurrentImage = DefaultValues.image;
         }
 
         public void OnCheckedBChanged(ImageItem item)
         {
-            CurrentImage = item.icon;
+            CurrentImage = item.Icon;
+
+            if (item.Group != currentGroup)
+            {
+                cleanGroup(currentGroup);
+            }
+
+            currentGroup = item.Group;
+
+        }
+
+        private void cleanGroup(string Group)
+        {
+            switch (Group)
+            {
+                case "Group1":
+                    {
+                        for (int i = 1; i < Group1.Count(); i++)
+                        {
+                            Group1[i].IsChecked = false;
+                        }
+                        break;
+                    }
+
+                case "Group2":
+                    {
+                        for (int i = 1; i < Group2.Count(); i++)
+                        {
+                            Group2[i].IsChecked = false;
+                        }
+                        break;
+                    }
+
+                case "Group3":
+                    {
+                        for (int i = 1; i < Group3.Count(); i++)
+                        {
+                            Group3[i].IsChecked = false;
+                        }
+                        break;
+                    }
+
+                default:
+                    {
+
+                        break;
+                    }
+            }
         }
 
     }
