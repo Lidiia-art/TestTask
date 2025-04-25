@@ -29,7 +29,7 @@
         <DataTemplate>
           <StackPanel  Orientation="Vertical">
             <Label Classes="bold" Foreground="Black" HorizontalAlignment="Center" Content="{Binding Value1, StringFormat={} Pin {0}}}"/>
-            <ComboBox Width="150" MaxDropDownHeight="100" HorizontalAlignment="Center"    SelectedIndex="{Binding Index}">
+            <ComboBox Width="160" MaxDropDownHeight="100" HorizontalAlignment="Center"    SelectedIndex="{Binding Index}">
               <ComboBoxItem>Section 1</ComboBoxItem>
               <ComboBoxItem>Section 2</ComboBoxItem>
               <ComboBoxItem>Section 3</ComboBoxItem>
