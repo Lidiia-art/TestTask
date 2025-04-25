@@ -21,13 +21,13 @@
     <ItemsControl Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding ItemsIndexes}" HorizontalAlignment="Left" BorderBrush="Black" VerticalAlignment="Top" >
       <ItemsControl.ItemsPanel>
         <ItemsPanelTemplate>
-          <WrapPanel  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"  ItemWidth="170" ItemHeight="80"  Width="600"/>
+          <WrapPanel  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"  ItemWidth="170" ItemHeight="80"  Width="800"/>
         </ItemsPanelTemplate>
       </ItemsControl.ItemsPanel>
 
       <ItemsControl.ItemTemplate>
         <DataTemplate>
-          <StackPanel Orientation="Vertical">
+          <StackPanel  Orientation="Vertical">
             <Label Classes="bold" Foreground="Black" HorizontalAlignment="Center" Content="{Binding Value1, StringFormat={} Pin {0}}}"/>
             <ComboBox Width="160" MaxDropDownHeight="100" HorizontalAlignment="Center"    SelectedIndex="{Binding Index}">
               <ComboBoxItem>Section 1</ComboBoxItem>
