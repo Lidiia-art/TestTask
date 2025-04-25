@@ -1,0 +1,186 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="700"
+             x:Class="testTask.Views.VehicleTypeView"
+             xmlns:vm="clr-namespace:testTask.ViewModels"
+             x:DataType="vm:VehicleTypeViewModel"
+             >
+  <Design.DataContext>
+    <vm:VehicleTypeViewModel>
+    </vm:VehicleTypeViewModel>
+  </Design.DataContext>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="150"/>
+      <ColumnDefinition Width="180"/>
+      <ColumnDefinition Width="200"/>
+      <ColumnDefinition Width="200"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto"/>
+      <RowDefinition Height="auto"/>
+    </Grid.RowDefinitions>
+    
+    <HeaderedContentControl  Grid.Column="0" Grid.Row="0"  Grid.ColumnSpan="3" Header="Settings" Width="500" Height="122" HorizontalAlignment="Left" VerticalAlignment="Top">
+      <StackPanel Spacing="50" Orientation="Horizontal">
+       <RadioButton GroupName="FirstGroup" 
+                       Width="130" Height="80" IsChecked="{Binding IsChecked1}">
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" Background="Transparent"  BorderThickness="1" Width="100" Height="60">             
+                <Image Source="avares://testTask/Assets/icons/VehicleTypePage/vehiclePageHarvester.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+        
+        <RadioButton GroupName="FirstGroup"  Width="130" Height="80" IsChecked="{Binding IsChecked2}">
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" Background="Transparent"  BorderThickness="1" Width="100" Height="60">
+                <Image Source="avares://testTask/Assets/icons/VehicleTypePage/vehiclePageTractor.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+
+        <RadioButton GroupName="FirstGroup"  Width="130" Height="80" IsChecked="{Binding IsChecked3}">
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" Background="Transparent"  BorderThickness="1" Width="100" Height="60">
+                <Image Source="avares://testTask/Assets/icons/VehicleTypePage/vehiclePageArticulated.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+      </StackPanel>
+    </HeaderedContentControl>
+    
+    <Grid Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="auto"/>
+      </Grid.ColumnDefinitions>
+      
+      <ItemsControl  ItemsSource="{Binding Group1}" Height="400" HorizontalAlignment="Center" IsVisible="{Binding IsChecked1}" BorderBrush="Black"><ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+            <WrapPanel Orientation="Vertical" ItemWidth="80" ItemHeight="80"/>
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+
+            <RadioButton GroupName="Group1" Width="80" Height="80"  IsChecked="{Binding IsChecked}"     
+                         Command="{Binding $parent[ItemsControl].((vm:VehicleTypeViewModel)DataContext).OnCheckedBChanged}"
+                         CommandParameter="{Binding}">
+              <RadioButton.Template>
+                <ControlTemplate TargetType="RadioButton">
+                  <Border Name="border" Background="Transparent" BorderThickness="1" Width="100" Height="60">
+                    <Image  Source="{Binding Icon}" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            />
+                  </Border>
+                </ControlTemplate>
+              </RadioButton.Template>
+            </RadioButton>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </Grid>
+    
+    <Grid Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="auto"/>
+        <ColumnDefinition Width="auto"/>
+        <ColumnDefinition Width="auto"/>
+      </Grid.ColumnDefinitions>
+
+      <ItemsControl  ItemsSource="{Binding Group2}" Height="400" HorizontalAlignment="Center" IsVisible="{Binding IsChecked2}"><ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+            <WrapPanel Orientation="Vertical" ItemWidth="80" ItemHeight="80"/>
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <RadioButton GroupName="Group2" Width="80" Height="80" IsChecked="{Binding IsChecked}"
+                         Command="{Binding $parent[ItemsControl].((vm:VehicleTypeViewModel)DataContext).OnCheckedBChanged}"
+                         CommandParameter="{Binding}">
+              <RadioButton.Template>
+                <ControlTemplate TargetType="RadioButton">
+                  <Border Name="border" Background="Transparent" BorderThickness="1" Width="100" Height="60">
+                    <Image Source="{Binding Icon}" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                  </Border>
+                </ControlTemplate>
+              </RadioButton.Template>
+            </RadioButton>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </Grid>
+
+    <Grid Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="auto"/>
+        <ColumnDefinition Width="auto"/>
+        <ColumnDefinition Width="auto"/>
+      </Grid.ColumnDefinitions>
+
+      <ItemsControl  ItemsSource="{Binding Group1}" Height="400" HorizontalAlignment="Center" IsVisible="{Binding IsChecked3}"><ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+            <WrapPanel Orientation="Vertical" ItemWidth="80" ItemHeight="80"/>
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <RadioButton GroupName="Group3" Width="80" Height="80" IsChecked="{Binding IsChecked}"
+                         Command="{Binding $parent[ItemsControl].((vm:VehicleTypeViewModel)DataContext).OnCheckedBChanged}"
+                         CommandParameter="{Binding}">
+              <RadioButton.Template>
+                <ControlTemplate TargetType="RadioButton">
+                  <Border Name="border" Background="Transparent" BorderThickness="1" Width="100" Height="60">
+                    <Image Source="{Binding Icon}" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                  </Border>
+                </ControlTemplate>
+              </RadioButton.Template>
+            </RadioButton>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </Grid>
+    
+    <StackPanel Grid.Column="3" Grid.Row="0" Grid.RowSpan="2"  Spacing="" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+      <StackPanel HorizontalAlignment="Center" Margin="30">
+        <Label HorizontalAlignment="Center" Classes="bold" >No image</Label>
+        <Button Classes="" Width="96" Height="96"
+                 Command="{Binding NoImageCommand}">
+          <Image Classes="" Source="avares://testTask/Assets/icons/VehicleTypePage/TriangleVehicle.png" HorizontalAlignment="Center"/>
+        </Button>
+      </StackPanel>
+      
+      <Border Width="256" Height="256">
+        <Border.Background>
+          <ImageBrush Source="avares://testTask/Assets/icons/VehicleTypePage/transparent.jpg"
+               Stretch="UniformToFill" />
+        </Border.Background>
+        <Image Classes="" Opacity="{Binding Opacity}" Width="150"  Source="{Binding CurrentImage}" HorizontalAlignment="Center"/>
+      </Border>
+      
+      <Label HorizontalAlignment="Center" Classes="bold">Opacity</Label>
+      
+      <StackPanel  Width="260" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+        <Button Classes="" Width="96" Height="96" HorizontalAlignment="Center"
+                Command="{Binding DecreaseCommand}">
+          <Image Classes="" Source="avares://testTask/Assets/icons/VehicleTypePage/DnArrow64.png"/>
+        </Button>
+        <Label Width="100" Classes="bold" FontSize="30" Content="{Binding Opacity, StringFormat=' {0:P0}'}" HorizontalContentAlignment="Center"  VerticalAlignment="Center" HorizontalAlignment="Center" >d%</Label>
+        <Button Classes="" Width="96" Height="96"
+                Command="{Binding IncreaseCommand}">
+          <Image Classes="" Source="avares://testTask/Assets/icons/VehicleTypePage/UpArrow64.png"/>
+        </Button>
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</UserControl>

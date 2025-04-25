@@ -1,0 +1,194 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="580"
+             xmlns:vm="clr-namespace:testTask.ViewModels"
+             Height="580"
+             x:DataType="vm:DisplayViewModel"
+             x:Class="testTask.Views.DisplayView">
+  <Design.DataContext>
+    <vm:DisplayViewModel>
+    </vm:DisplayViewModel>
+  </Design.DataContext>
+  <Grid Margin="20,0,0,0">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="180"/>
+      <ColumnDefinition Width="180"/>
+      <ColumnDefinition Width="280"/>
+      <ColumnDefinition Width="180"/>
+    </Grid.ColumnDefinitions>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="0,5">
+      <StackPanel Spacing="" Margin="">
+          <Label Classes="bold" Content="Filled menu"/>
+        <StackPanel Margin="0,5">
+          <Label Content="Tram Lines" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/TramOuter.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Content="Headland" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/HydraulicLiftOn.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Content="Boundary" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/Boundary.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Content="Recorded Path" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/RecPath.png"/>
+          </ToggleButton>
+        </StackPanel>
+      </StackPanel>
+    </StackPanel>
+
+    <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,5">
+      <StackPanel Spacing="" Margin="">
+        <Label Classes="bold" Content="Filled menu"/>
+        <StackPanel Margin="0,5">
+          <Label Content="Smooth AB Curve" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/ABSmooth.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Content="Contour On" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/Trash.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Content="WebCam" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/Webcam.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Content="OffsetFix" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/YouTurnReverse.png"/>
+          </ToggleButton>
+        </StackPanel>
+      </StackPanel>
+    </StackPanel>
+
+    <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="0,5">
+      <StackPanel Spacing="" Margin="">
+        <Label Classes="bold" HorizontalAlignment="Center" Content="Filled menu"/>
+        <StackPanel Spacing="20" Orientation="Horizontal">
+          <StackPanel Margin="0,5">
+            <Label Content="U-Turn" HorizontalAlignment="Center" />
+            <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+              <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/z_TurnManual.png"/>
+            </ToggleButton>
+          </StackPanel>
+          
+          <StackPanel Margin="0,5">
+            <Label Content="Lateral" HorizontalAlignment="Center" />
+            <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+              <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/z_LateralManual.png"/>
+            </ToggleButton>
+          </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Classes="bold" Content="Bottom menu" HorizontalAlignment="Center" />
+          <Label Content="Nunge:" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/SnapToPivot.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Classes="bold" Content="Right menu" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/ABTracks.png"/>
+          </ToggleButton>
+        </StackPanel>
+      </StackPanel>
+    </StackPanel>
+    
+    <StackPanel Grid.Column="3" Orientation="Horizontal" Margin="0,5">
+      <StackPanel Spacing="" Margin="">
+        <Label Classes="bold" Content="Filled menu"/>
+        <StackPanel Margin="0,5">
+          <Label Content="Auto Steer" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/ConF_SteerSound.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Content="U-Turn" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/ConF_TurnSound.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Content="Hydraulic" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/HydraulicLiftOn.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <Label Content="Sections" HorizontalAlignment="Center" />
+          <ToggleButton  HorizontalAlignment="Center" Width="77" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/ConF_SoundSections.png"/>
+          </ToggleButton>
+        </StackPanel>
+      </StackPanel>
+    </StackPanel>
+
+    <StackPanel Spacing="60" Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
+      <StackPanel  HorizontalAlignment="Center"  Grid.ColumnSpan="2"  Margin="0,5">
+        <Label Content="Power Loss Shutdown" HorizontalAlignment="Center" />
+        <ToggleButton  Width="120" Height="57" BorderBrush="Black">
+          <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/ChargingNo.png"/>
+        </ToggleButton>
+      </StackPanel>
+
+      <StackPanel Spacing="15" Orientation="Horizontal" >
+        <StackPanel  HorizontalAlignment="Center"  Grid.ColumnSpan="2"  Margin="0,5">
+          <Label Content="Auto Start AGIQ" HorizontalAlignment="Center" />
+          <ToggleButton  Width="120" Height="57" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/AgIO.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel  HorizontalAlignment="Center"  Grid.ColumnSpan="2"  Margin="0,5">
+          <Label Content="Auto off AGIQ" HorizontalAlignment="Center" />
+          <ToggleButton  Width="120" Height="57" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/AgIO.png"/>
+          </ToggleButton>
+        </StackPanel>
+      </StackPanel>
+      
+      <StackPanel  HorizontalAlignment="Center"  Grid.ColumnSpan="2"  Margin="0,5">
+        <Label Content="HardwareMessages" HorizontalAlignment="Center" />
+        <ToggleButton  Width="120" Height="57" BorderBrush="Black">
+          <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/DisplayPage/HardwareMessage.png"/>
+        </ToggleButton>
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</UserControl>

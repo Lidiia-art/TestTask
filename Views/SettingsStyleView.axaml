@@ -1,0 +1,69 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="580"
+             xmlns:vm="clr-namespace:testTask.ViewModels"
+             Height="580"
+             Background="Ivory"
+             x:DataType="vm:SettingsStyleViewModel"
+             x:Class="testTask.Views.SettingsStyleView">
+
+  <Design.DataContext>
+    <vm:SettingsStyleViewModel>
+    </vm:SettingsStyleViewModel>
+  </Design.DataContext>
+  
+  <HeaderedContentControl   Header="Antenna Offset" Width="680" Height="550" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <StackPanel Spacing="100" Orientation="Vertical">
+
+      <StackPanel Spacing="40" Orientation="Horizontal" Margin="0,40,0,0">
+        <RadioButton GroupName="FirstGroup" IsChecked="{Binding IsChecked}"
+                       Width="300" Height="150">
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" Background="Transparent"  BorderThickness="1">
+                <Image Source="avares://testTask/Assets/icons/SettingsStylePage/ToolChkRear.png" Stretch="UniformToFill" />
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+
+        <RadioButton GroupName="FirstGroup"
+                       Width="300" Height="150">
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" Background="Transparent"  BorderThickness="1">
+                <Image Source="avares://testTask/Assets/icons/SettingsStylePage/ToolChkTBT.png" Stretch="UniformToFill" />
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+      </StackPanel>
+      <StackPanel Spacing="40" Orientation="Horizontal">
+        <RadioButton GroupName="FirstGroup"
+                        Width="300" Height="150">
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" Background="Transparent"  BorderThickness="1">
+                <Image Source="avares://testTask/Assets/icons/SettingsStylePage/ToolChkFront.png" Stretch="UniformToFill" />
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+
+        <RadioButton GroupName="FirstGroup"
+                        Width="300" Height="150">
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" Background="Transparent"  BorderThickness="1">
+                <Image Source="avares://testTask/Assets/icons/SettingsStylePage/ToolChkTrailing.png" Stretch="UniformToFill" />
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+    </StackPanel>
+
+    </StackPanel>
+  </HeaderedContentControl>
+</UserControl>

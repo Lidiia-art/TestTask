@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="580"
+             xmlns:vm="clr-namespace:testTask.ViewModels"
+             Height="580"
+             Background="Ivory"
+             x:DataType="vm:UnitsViewModel"
+             x:Class="testTask.Views.UnitsView">
+
+  <Design.DataContext>
+    <vm:UnitsViewModel>
+    </vm:UnitsViewModel>
+  </Design.DataContext>
+
+  <StackPanel Height="400" Width="350" HorizontalAlignment="Center"  VerticalAlignment="Top" Orientation="Vertical" Margin="10,20,0,0">
+    <Image Height="400" Width="840" Source = "avares://testTask/Assets/icons/UnitsViewPage/ToolHitchPageFront.png"/>
+    
+    <StackPanel Height="50" Width="180" Orientation="Vertical" HorizontalAlignment="Center">
+      <TextBox  HorizontalAlignment="Right" FontWeight="Bold" FontSize="35" Width="150"  Text="100" TextAlignment="Center" />
+      <Label Classes="bold" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Units:"/>
+      <Label Classes="bold" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" Content="cm"/>
+    </StackPanel>
+  </StackPanel>
+</UserControl>

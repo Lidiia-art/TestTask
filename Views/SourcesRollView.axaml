@@ -1,0 +1,110 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="580"
+             xmlns:vm="clr-namespace:testTask.ViewModels"
+             Height="580"
+             x:DataType="vm:SourcesRollViewModel"
+             x:Class="testTask.Views.SourcesRollView">
+
+  <Design.DataContext>
+    <vm:SourcesRollViewModel>
+    </vm:SourcesRollViewModel>
+  </Design.DataContext>
+  <StackPanel Orientation="Vertical" Margin="0,5">
+    <StackPanel Spacing="420" Orientation="Horizontal" Margin="0,5">
+      <StackPanel Margin="50,0,0,0" >
+        <Label Content="Remove offset"/>
+
+        <RadioButton GroupName="FirstGroup"                          
+                     Width="130"
+                     Height="95" IsChecked="{Binding IsActiveBtn1, Mode=TwoWay}">
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" Background="Transparent" BorderBrush="Black" BorderThickness="1">
+                <Image Source="avares://testTask/Assets/icons/RollViewPage/ConDa_RemoveOffset.png" Stretch="UniformToFill" />
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+      </StackPanel>
+      
+         <RadioButton GroupName="FirstGroup"
+                      Width="130"
+                      Height="95" IsChecked="{Binding IsActiveBtn3, Mode=TwoWay}">
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" Background="Transparent" BorderBrush="Black" BorderThickness="1">
+                <Image Source="avares://testTask/Assets/icons/RollViewPage/ConDa_ResetIMU.png"/>
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+      
+    </StackPanel>
+
+    <StackPanel Spacing="52" Orientation="Horizontal" Margin="50,80,0,0">
+      <StackPanel Orientation="Horizontal">
+          <StackPanel>
+          <Label Content="Remove offset"/>
+            <RadioButton GroupName="FirstGroup"
+                          Width="130"
+                          Height="95"
+                         IsChecked="{Binding IsActiveBtn2, Mode=TwoWay}">
+              <RadioButton.Template>
+                <ControlTemplate>
+                  <Border Name="border" Background="Transparent" BorderBrush="Black" BorderThickness="1">
+                    <Image Source="avares://testTask/Assets/icons/RollViewPage/ConDa_RollSetZero.png"/>
+                  </Border>
+                </ControlTemplate>
+              </RadioButton.Template>
+            </RadioButton>
+        </StackPanel>
+        
+         <Label Classes="bold" Width="60" Foreground="Black" Content="{Binding Value, Mode=TwoWay}" VerticalAlignment="Center" />
+      
+      </StackPanel>
+      <StackPanel Spacing=""  Orientation="Horizontal">
+        <Button Classes="default" Margin="0,0,0,0" Width="130"
+              Height="95"
+                    Command="{Binding ChangeValue}">
+          <Image Classes="default" Source="avares://testTask/Assets/icons/RollViewPage/DnArrow64.png"/>
+        </Button>
+        <Button Classes="default" Margin="0,0,0,0"  Width="130"
+              Height="95"
+                    Command="{Binding ChangeValue}">
+          <Image Classes="default" Source="avares://testTask/Assets/icons/RollViewPage/UpArrow64.png"/>
+        </Button>
+      </StackPanel>
+      
+      <StackPanel>
+        <Label Content="Invert Role"/>
+        <Button Classes="default border" Margin="0,0,0,0"  Width="130"
+              Height="95"
+                     Classes.active="{Binding IsActiveBtn4}"
+                     Command="{Binding ChangeActiveBtn4}">
+          <Image Classes="default" Source="avares://testTask/Assets/icons/RollViewPage/ConDa_InvertRoll.png"/>
+        </Button>
+      </StackPanel>
+    </StackPanel>
+    
+    <StackPanel Spacing="250"  Orientation="Horizontal" Margin="50,70,0,0">
+      <StackPanel>
+        <StackPanel Spacing="40" Orientation="Horizontal">
+          <Label Classes="bold" Content="Less"/>
+          <Label Classes="bold" Content="Roll Filter"/>
+          <Label Classes="bold" Content="More"/>
+        </StackPanel>
+        
+        <StackPanel  Orientation="Horizontal" >
+          <Slider Margin="0,0,0,0"  Minimum="0" Maximum="100" Value="{Binding ValueSlider, Mode=TwoWay}" Width="280" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Label Classes="bold" FontSize="30" HorizontalAlignment="Center" Content="{Binding ValueSlider}"/>
+      </StackPanel>
+      
+      <Image Source="avares://testTask/Assets/icons/RollViewPage/ConD_RollHelper.png"/>
+      
+    </StackPanel>
+  </StackPanel>
+</UserControl>
