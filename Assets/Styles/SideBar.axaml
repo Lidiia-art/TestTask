@@ -14,7 +14,7 @@
     <Setter Property="Background" Value="#B9D1EA"/>
   </Style>
 
-  <Style Selector="Button.active">
+  <Style Selector="Button.sideBarActive">
     <Setter Property="Background" Value="DodgerBlue"/>
   </Style>  
 

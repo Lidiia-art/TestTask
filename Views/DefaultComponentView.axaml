@@ -8,6 +8,10 @@
              x:DataType="vm:DefaultComponentViewModel"
              x:Class="testTask.Views.DefaultComponentView"
              >
+  <UserControl.Styles>
+    <StyleInclude Source="avares://testTask/Assets/Styles/DefaultPage.axaml"/>
+  </UserControl.Styles>
+  
   <Design.DataContext>
     <vm:DefaultComponentViewModel>
     </vm:DefaultComponentViewModel>
@@ -103,7 +107,7 @@
       <Button Classes="default" IsEnabled="{Binding IsActiveBtn2}" Margin="0,0,0,0" Classes.defaultActive="{Binding IsActiveBtn2}"
               Classes.defaulwait="{Binding IswaitBtn2}"
               Command="{Binding AddItemCommand}"
-              CommandParameter="{Binding ElementName=Input1, Path=Text}">
+              CommandParameter="{Binding ElementName=Input2, Path=Text}">
         <Image Classes="default" Source="avares://testTask/Assets/icons/DefaultPageIcons/FileSave.png"/>
       </Button>
 

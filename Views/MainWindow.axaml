@@ -14,6 +14,10 @@
         Title="testTask"
         xmlns:models="using:testTask.Models">
 
+    <Window.Styles>
+      <StyleInclude Source="avares://testTask/Assets/Styles/SideBar.axaml"/>
+    </Window.Styles>
+  
     <Window.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
@@ -45,7 +49,7 @@
                         <ItemsControl.ItemTemplate>
                           <DataTemplate>
                             <StackPanel>
-                              <Button Classes="sidebarButton" Classes.active="{Binding IsActive}"
+                              <Button Classes="sidebarButton" Classes.sideBarActive="{Binding IsActive}"
                               Command="{Binding $parent[Window].((vm:MainWindowViewModel)DataContext).SelectItemCommand}"
                               CommandParameter="{Binding}">
                                 <Image Classes="sidebar ButtonSub" Source="{Binding Icon}"/>
@@ -86,7 +90,9 @@
                     <TextBlock Classes="bold" Width="" Text="400cm" VerticalAlignment="Center"/>
                   </StackPanel>
 
+                  <Button  Width="80" Height="80">
                   <Image VerticalAlignment="Center" Width="80" Height="80" Source="avares://testTask/Assets/icons/sideBarIcons/OK64.png"/>
+                  </Button>
                 </StackPanel>
               </Grid>
             </StackPanel>

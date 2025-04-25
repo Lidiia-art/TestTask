@@ -7,6 +7,11 @@
               xmlns:vm="clr-namespace:testTask.ViewModels"
              x:DataType="vm:SubSectionsViewModel">
 
+
+  <UserControl.Styles>
+    <StyleInclude Source="avares://testTask/Assets/Styles/SubSection.axaml"/>
+  </UserControl.Styles>
+  
   <Design.DataContext>
     <vm:SubSectionsViewModel>
     </vm:SubSectionsViewModel>

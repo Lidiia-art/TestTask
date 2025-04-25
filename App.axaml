@@ -14,9 +14,7 @@
     </Application.DataTemplates>
     <Application.Styles>
         <FluentTheme/>
-      <StyleInclude Source="avares://testTask/Assets/Styles/SideBar.axaml"/>
-      <StyleInclude Source="avares://testTask/Assets/Styles/DefaultPage.axaml"/>
+      
       <StyleInclude Source="avares://testTask/Assets/Styles/General.axaml"/>
-      <StyleInclude Source="avares://testTask/Assets/Styles/SubSection.axaml"/>
     </Application.Styles>
 </Application>
