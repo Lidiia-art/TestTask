@@ -78,14 +78,12 @@ namespace testTask.ViewModels
                 IsChecked1 = false;
                 IsChecked2 = false;
                 IsChecked3 = false;
-
-                cleanGroup(currentGroup);
             }
             else
             {
                 IsChecked1 = true;
             }
-
+            cleanGroup(currentGroup);
             CurrentImage = DefaultValues.image;
         }
 

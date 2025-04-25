@@ -21,7 +21,7 @@
     <ItemsControl Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding ItemsIndexes}" HorizontalAlignment="Left" BorderBrush="Black" VerticalAlignment="Top" >
       <ItemsControl.ItemsPanel>
         <ItemsPanelTemplate>
-          <WrapPanel  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"  ItemWidth="170" ItemHeight="80"  Width="850"/>
+          <WrapPanel  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"  ItemWidth="170" ItemHeight="80"  Width="845"/>
         </ItemsPanelTemplate>
       </ItemsControl.ItemsPanel>
 
@@ -29,7 +29,7 @@
         <DataTemplate>
           <StackPanel  Orientation="Vertical">
             <Label Classes="bold" Foreground="Black" HorizontalAlignment="Center" Content="{Binding Value1, StringFormat={} Pin {0}}}"/>
-            <ComboBox Width="138" MaxDropDownHeight="100" HorizontalAlignment="Center"    SelectedIndex="{Binding Index}">
+            <ComboBox Width="150" MaxDropDownHeight="100" HorizontalAlignment="Center"    SelectedIndex="{Binding Index}">
               <ComboBoxItem>Section 1</ComboBoxItem>
               <ComboBoxItem>Section 2</ComboBoxItem>
               <ComboBoxItem>Section 3</ComboBoxItem>
