@@ -124,18 +124,6 @@
       
       <Label  Classes="bold" Content="Delete" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5" FontSize="15"/>
     </StackPanel>
-
-    <Image Source="avares://testTask/Assets/icons/DefaultPageIcons/Trash.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
-      <Image.RenderTransform>
-        <TranslateTransform />
-        </Image.RenderTransform>
-      <Image.OpacityMask>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-          <GradientStop Offset="0" Color="White"/>
-          <GradientStop Offset="1" Color="Transparent"/>
-        </LinearGradientBrush>
-      </Image.OpacityMask>
-    </Image>
   </Grid>
 
 </UserControl>

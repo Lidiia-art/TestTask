@@ -39,7 +39,7 @@
                 <ItemsControl.ItemTemplate>
                   <DataTemplate x:DataType="models:MenuItemModel">
                     <StackPanel>
-                      <Button Classes="sidebarButton" Classes.active="{Binding IsActive}"  
+                      <Button Classes="sidebarButton" Classes.sideBarActive="{Binding IsActive}"  
                                 Command="{Binding $parent[Window].((vm:MainWindowViewModel)DataContext).SelectItemCommand}"
                               CommandParameter="{Binding}">
                         <Image Classes="sidebar ButtonMain" Source="{Binding Icon}"/>
@@ -75,7 +75,7 @@
                 </Grid.RowDefinitions>
                 
                <ContentControl Content="{Binding CurrentPage}"/>
-                <StackPanel Grid.Row="1" Spacing="40" Orientation="Horizontal" Margin="0,5">
+                <StackPanel Grid.Row="1" Spacing="80" Orientation="Horizontal" Margin="0,5">
                   <TextBlock Classes="bold" Text="Current:" VerticalAlignment="Center"/>
                   <StackPanel Orientation="Horizontal" Margin="150,0,0,0" VerticalAlignment="Center">
                     <TextBlock Classes="notbold" Foreground="Black" Text="Units:" VerticalAlignment="Center"/>
@@ -90,7 +90,7 @@
                     <TextBlock Classes="bold" Width="" Text="400cm" VerticalAlignment="Center"/>
                   </StackPanel>
 
-                  <Button  Width="80" Height="80">
+                  <Button  Width="80" Height="80" Margin="0,0,0,0" >
                   <Image VerticalAlignment="Center" Width="80" Height="80" Source="avares://testTask/Assets/icons/sideBarIcons/OK64.png"/>
                   </Button>
                 </StackPanel>
