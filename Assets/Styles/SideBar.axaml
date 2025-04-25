@@ -1,0 +1,39 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <!-- Add Controls for Previewer Here -->
+    </Border>
+  </Design.PreviewWith>
+
+  <Style Selector="Button.sidebarButton">
+    <Setter Property="Width" Value="120"/>
+    <Setter Property="Height" Value="80"/>
+    <Setter Property="Margin" Value="0"/>
+    <Setter Property="BorderThickness" Value="1"/>
+    <Setter Property="Background" Value="#B9D1EA"/>
+  </Style>
+
+  <Style Selector="Button.sideBarActive">
+    <Setter Property="Background" Value="DodgerBlue"/>
+  </Style>  
+
+  <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="LightGray" />
+  </Style>
+
+  <Style Selector="Image.sidebar">
+    <Setter Property="Width" Value="70"/>
+    <Setter Property="Height" Value="70"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+  </Style>
+  
+  <Style Selector="Image.ButtonMain">
+    <Setter Property="HorizontalAlignment" Value="Left"/>
+  </Style>
+
+  <Style Selector="Image.ButtonSub">
+    <Setter Property="HorizontalAlignment" Value="Right"/>
+  </Style>
+  
+</Styles>

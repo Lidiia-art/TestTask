@@ -1,0 +1,129 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="860" d:DesignHeight="580"
+             xmlns:vm="clr-namespace:testTask.ViewModels"
+             Height="580"
+             x:DataType="vm:DefaultComponentViewModel"
+             x:Class="testTask.Views.DefaultComponentView"
+             >
+  <UserControl.Styles>
+    <StyleInclude Source="avares://testTask/Assets/Styles/DefaultPage.axaml"/>
+  </UserControl.Styles>
+  
+  <Design.DataContext>
+    <vm:DefaultComponentViewModel>
+    </vm:DefaultComponentViewModel>
+  </Design.DataContext>
+
+  <Grid Background="Ivory">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="204"/>
+      <ColumnDefinition Width="400"/>
+      <ColumnDefinition Width="200"/>
+    </Grid.ColumnDefinitions>
+
+    <StackPanel Grid.Column="0"  Margin="10,0,0,50" VerticalAlignment="Bottom">
+      <StackPanel Orientation="Horizontal" Margin="0,5">
+        <TextBlock Text="Units:"  Classes="notbold"/>
+        <TextBlock Text="Metric" Classes="bold"/>
+      </StackPanel>
+
+      <StackPanel Orientation="Horizontal" Margin="0,5">
+        <TextBlock Text="Width:"  Classes="notbold"/>
+        <TextBlock Text="7.2 m" Classes="bold"/>
+      </StackPanel>
+
+      <StackPanel Orientation="Horizontal" Margin="0,5">
+        <TextBlock Text="Sections:"  Classes="notbold"/>
+        <TextBlock Text="5" Classes="bold"/>
+      </StackPanel>
+
+      <StackPanel Orientation="Horizontal" Margin="0,5">
+        <TextBlock Text="Offset:" Classes="notbold"/>
+        <TextBlock Text="5" Classes="bold"/>
+      </StackPanel>
+      
+      <StackPanel Orientation="Horizontal" Margin="0,5">
+        <TextBlock Text="Overlap:" Classes="notbold"/>
+        <TextBlock Text="3 cm" Classes="bold"/>
+      </StackPanel>
+
+      <StackPanel Orientation="Horizontal" Margin="0,5">
+        <TextBlock Text="Lookahead:"  Classes="notbold"/>
+        <TextBlock Text="1 sec" Classes="bold"/>
+      </StackPanel>
+      
+      <StackPanel Orientation="Horizontal" Margin="0,5">
+        <TextBlock Text="Line Shift:" Classes="notbold"/>
+        <TextBlock Text="5" Classes="bold"/>
+      </StackPanel>
+
+      <StackPanel Orientation="Horizontal" Margin="0,5">
+        <TextBlock Text="Tram Width:" Classes="notbold"/>
+        <TextBlock Text="2400cm" Classes="bold"/>
+      </StackPanel>
+
+      <StackPanel Orientation="Horizontal" Margin="0,5">
+        <TextBlock Text="Wheel Base:" Classes="notbold"/>
+        <TextBlock Text="2.4 m" Classes="bold"/>
+      </StackPanel>
+    </StackPanel>
+
+    <Grid Grid.Column="1" Margin="10" VerticalAlignment="Top">
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
+      
+      <Label Grid.Row="0" Grid.Column="0"  Classes="bold" Content="Vehicle Name"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5"/>
+      <Label Grid.Row="1" Grid.Column="0"  Classes="bold" Content="Save as:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5"/>
+      <TextBox  Grid.Row="1" Grid.Column="1" Name="Input1" Margin="5,5" MinWidth="200"  Text="{Binding Name, Mode=TwoWay}"/>
+      
+      <Label Grid.Row="2" Grid.Column="0"  Classes="bold" Content="New From Default:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5"/>
+      <TextBox  Grid.Row="2" Grid.Column="1" Name="Input2" Margin="5,5" MinWidth="200" Text="{Binding FromDisc, Mode=TwoWay}
+               "/>
+      <TextBlock Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Grid.Column="0"  Text="{Binding ItemsText}" TextWrapping="Wrap" Height="400" Width="500" Foreground="Black" Background="LightSteelBlue"/>
+    </Grid>
+
+    <StackPanel Grid.Column="2" VerticalAlignment="Top" Margin="0,40,0,0" HorizontalAlignment="Right">
+      <Button Classes="default" IsEnabled="{Binding IsActiveBtn1}" Classes.defaultActive="{Binding IsActiveBtn1}"
+              Classes.defaulwait="{Binding IswaitBtn1}"
+              Command="{Binding AddItemCommand}"
+              CommandParameter="{Binding ElementName=Input1, Path=Text}">
+        <Image Classes="default" Source="avares://testTask/Assets/icons/DefaultPageIcons/FileSaveAs.png"/>
+      </Button>
+
+      <Button Classes="default" IsEnabled="{Binding IsActiveBtn2}" Margin="0,0,0,0" Classes.defaultActive="{Binding IsActiveBtn2}"
+              Classes.defaulwait="{Binding IswaitBtn2}"
+              Command="{Binding AddItemCommand}"
+              CommandParameter="{Binding ElementName=Input2, Path=Text}">
+        <Image Classes="default" Source="avares://testTask/Assets/icons/DefaultPageIcons/FileSave.png"/>
+      </Button>
+
+      <Button Classes="default" IsEnabled="{Binding IsActiveBtn3}" Margin="0,40,0,0">
+        <Image Classes="default" Source="avares://testTask/Assets/icons/DefaultPageIcons/FileOpen.png"/>
+      </Button>
+      
+      <Label  Classes="bold" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5" FontSize="15"/>
+
+      <Button Classes="default" IsEnabled="{Binding IsActiveBtn3}" Margin="0,40,0,0"
+              Command="{Binding Clean}">
+        <Image Classes="default" Source="avares://testTask/Assets/icons/DefaultPageIcons/Trash.png"/>
+      </Button>
+      
+      <Label  Classes="bold" Content="Delete" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5" FontSize="15"/>
+    </StackPanel>
+  </Grid>
+
+</UserControl>

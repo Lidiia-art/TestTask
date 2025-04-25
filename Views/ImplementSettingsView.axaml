@@ -1,0 +1,54 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:anim="https://github.com/whistyun/AnimatedImage.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="580"
+             xmlns:vm="clr-namespace:testTask.ViewModels"
+             Height="580"
+             Background="Ivory"
+             x:DataType="vm:ImplementSettingsViewModel"
+             x:Class="testTask.Views.ImplementSettingsView">
+  <Design.DataContext>
+    <vm:ImplementSettingsViewModel>
+    </vm:ImplementSettingsViewModel>
+  </Design.DataContext>
+  <StackPanel Orientation="Horizontal" Margin="0,5">
+    <StackPanel Spacing="20" Width="280" Height="400" Orientation="Vertical" Margin="0,5">
+      <Image  anim:ImageBehavior.AnimatedSource="avares://testTask/Assets/icons/ImplementSettingsPage/SectionOnLookAhead.gif"
+        Width="200"
+        Height="350"
+        Stretch="Uniform"/>
+      
+      <StackPanel    Orientation="Vertical" Margin="">
+        <TextBox  FontSize="25"  Name="speed1" Margin="" Width="100"/>
+        <Label Classes="bold" Content="On(secs)"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5"/>
+      </StackPanel>
+    </StackPanel>
+    
+    <StackPanel Spacing="20"  Width="280" Height="400" Orientation="Vertical" Margin="0,5">
+      <Image  anim:ImageBehavior.AnimatedSource="avares://testTask/Assets/icons/ImplementSettingsPage/SectionLookAheadOff.gif"
+       Width="200"
+       Height="350"
+       Stretch="Uniform"/>
+      
+      <StackPanel   Orientation="Vertical" Margin="">
+        <TextBox  FontSize="25"  Name="speed2" Margin="" Width="100"/>
+        <Label Classes="bold" Content="Off(secs)"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5"/>
+      </StackPanel>
+    </StackPanel>
+    
+    <StackPanel Spacing="20" Width="280" Height="400" Orientation="Vertical" Margin="0,5">
+      <Image  anim:ImageBehavior.AnimatedSource="avares://testTask/Assets/icons/ImplementSettingsPage/SectionLookAheadDelay.gif"
+       Width="200"
+       Height="350"
+       Stretch="Uniform"/>
+      
+      <StackPanel   Orientation="Vertical" Margin="">
+        <TextBox  FontSize="25"  Name="speed3" Margin="" Width="100"/>
+        <Label Classes="bold" Content="Turn on delay secs"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5"/>
+      </StackPanel>
+      
+    </StackPanel>
+  </StackPanel>
+</UserControl>

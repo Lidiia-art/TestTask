@@ -1,0 +1,142 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="580"
+             xmlns:vm="clr-namespace:testTask.ViewModels"
+             Height="580"
+             Background="Ivory"
+             x:DataType="vm:SourcesHeadingViewModel"
+             x:Class="testTask.Views.SourcesHeadingView">
+
+  <Design.DataContext>
+    <vm:SourcesHeadingViewModel>
+    </vm:SourcesHeadingViewModel>
+  </Design.DataContext>
+  
+  <Grid Margin="30,0,0,0"> 
+    <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="auto"/>
+    <ColumnDefinition Width="auto"/>
+    </Grid.ColumnDefinitions>
+    
+    <Grid.RowDefinitions>
+      <RowDefinition Height="130"/>
+      <RowDefinition Height="auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    
+    <HeaderedContentControl  Grid.Column="0" Grid.ColumnSpan="2"    Grid.Row="0"   Header="Antenna Type" Width="600" Height="122" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+      <StackPanel Spacing="400" Orientation="Horizontal">
+
+        <RadioButton GroupName="FirstGroup" 
+                       Width="81" Height="80" IsChecked="{Binding IsActiveBtn1}"
+                    >
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" BorderBrush="Black" Background="Transparent"  BorderThickness="1">
+                <Image Source="avares://testTask/Assets/icons/SourseHeadingPage/Con_SourcesGPSDual.png" Stretch="UniformToFill" />
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+
+        <RadioButton GroupName="FirstGroup"
+                       Width="81" Height="80" IsChecked="{Binding IsActiveBtn2}">
+          <RadioButton.Template>
+            <ControlTemplate>
+              <Border Name="border" BorderBrush="Black" Background="Transparent"  BorderThickness="1">
+                <Image Source="avares://testTask/Assets/icons/SourseHeadingPage/Con_SourcesGPSSingle.png" Stretch="UniformToFill" />
+              </Border>
+            </ControlTemplate>
+          </RadioButton.Template>
+        </RadioButton>
+      </StackPanel>
+    </HeaderedContentControl>
+    
+    <HeaderedContentControl  Grid.Row="1"  Grid.Column="0" IsEnabled="{Binding IsActiveBtn1}" Header="Dual Antenna Settings" Width="350" Height="322" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+      <StackPanel Spacing="20">
+      <StackPanel Spacing="40" Orientation="Horizontal">
+        <Image Width="100" Height="100" VerticalAlignment="Top" Margin="20,40,0,0"  Source="avares://testTask/Assets/icons/SourseHeadingPage/Con_SourcesHead.png"/>
+          <StackPanel  Orientation="Vertical">
+            <StackPanel>
+            <Label  Foreground="Black" Content="Heading Offset Degree:"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox  FontSize="25"  Name="width" Margin="5,5" Width="100" />
+            </StackPanel>
+          
+            <StackPanel>
+              <Label  Foreground="Black" Content="Reverse Distance:"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              <TextBox  FontSize="25"  Name="distanse" Margin="5,5" Width="100" />
+            </StackPanel>
+          </StackPanel>
+       </StackPanel>
+        
+        <Button  Classes="border" HorizontalAlignment="Center"   Classes.active ="{Binding FixAlarm}" Width="340" Height="34"
+                   HorizontalContentAlignment="Center" 
+         VerticalContentAlignment="Center" Foreground="Black"  Command="{Binding MuteSet}" Content="Auto Dual &lt;&gt; Fix">
+        </Button>
+        
+        <StackPanel Orientation="Horizontal">
+          <Label  Foreground="Black" Content="Heading Offset Degree:"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <TextBox  FontSize="25"  Name="width1" Margin="5,5" Width="100" />
+        </StackPanel>
+        
+      </StackPanel>
+    </HeaderedContentControl>
+    
+    <HeaderedContentControl  Grid.Row="1"  Grid.Column="1" HorizontalAlignment="Center" Margin="40,0,0,0" IsEnabled="{Binding IsActiveBtn2}"
+                             Header="Dual Antenna Settings" Width="350" Height="322" VerticalAlignment="Bottom">
+      <StackPanel Spacing="20">
+        <StackPanel Orientation="Vertical">
+          <Label  Foreground="Black" Content="Minimum GPS Step:"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Button FontWeight="Bold" Foreground="Black"  Classes="border" HorizontalAlignment="Center"   Classes.active ="{Binding Step}" Width="140" Height="34"
+                   HorizontalContentAlignment="Center"
+         VerticalContentAlignment="Center"   Command="{Binding ChangeStep}" Content="{Binding Min}">
+          </Button>
+          <Label  Foreground="Black" Content="Fix to fix Distance"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Label  FontWeight="Bold" Foreground="Black" Content="{Binding Fix}"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical">
+          <StackPanel Orientation="Horizontal" Spacing="100">
+            <Label  Foreground="Black" Content="IMU&lt;"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label  Foreground="Black" Content="Fusion"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label  Foreground="Black" Content="GPS&gt;"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          </StackPanel>
+          
+          <StackPanel Orientation="Horizontal" >
+            <Label VerticalAlignment="Center" Classes ="bold" Content="{Binding Have}"/>
+            <Slider Margin="0,0,0,0"  Minimum="0" Maximum="100" Value="{Binding SliderValue, Mode=TwoWay}" Width="240" VerticalAlignment="Center"/>
+            <Label VerticalAlignment="Center" Classes ="bold" Content="{Binding Left}"/>
+          </StackPanel>
+          
+          <Label  Foreground="Black" Content="Default 70%"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Button FontWeight="Bold" Foreground="Black"  Classes="border" HorizontalAlignment="Center"   Classes.active ="{Binding Reverse}" Width="180" Height="44"
+                   HorizontalContentAlignment="Center"
+         VerticalContentAlignment="Center"   Command="{Binding SetReverse}" Content="Reverse Direction">
+        </Button>
+      </StackPanel>
+    </HeaderedContentControl>
+    
+    <StackPanel  Grid.Column="0" Grid.Row="2" Spacing="60" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal" >
+      <StackPanel VerticalAlignment="Bottom">
+        <Label Classes="bold" FontSize="12" FontWeight="DemiBold" Content="RTK Fix Alarm"/>
+        <Button Classes="border" HorizontalAlignment="Center"   Classes.active ="{Binding FixAlarm}" Width="123" Height="64" 
+                      Command="{Binding SetFixAlrm}">
+          <Image Classes="" Source="avares://testTask/Assets/icons/SourseHeadingPage/Con_SourcesRTKAlarm.png"/>
+        </Button>
+      </StackPanel>
+      
+      <StackPanel Grid.Column="0" Grid.Row="2">
+        <Label Classes="bold" FontSize="12" FontWeight="DemiBold" Content="Alarm Stops "/>
+        <Label Classes="bold" FontSize="12" FontWeight="DemiBold" Margin="15,0,0,0" Content="Autosteer"/>
+        <Button Classes="border" HorizontalAlignment="Center"   Classes.active ="{Binding AlarmStop}" Width="123" Height="64"
+                      Command="{Binding SetAlrmStop}">
+          <Image Classes="" Source="avares://testTask/Assets/icons/SourseHeadingPage/AutoSteerOff.png"/>
+        </Button>
+      </StackPanel>
+      
+    </StackPanel>
+  </Grid>
+</UserControl>

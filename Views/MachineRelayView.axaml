@@ -1,0 +1,66 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="580"
+             xmlns:vm="clr-namespace:testTask.ViewModels"
+             x:DataType="vm:MachineRelayViewModel"
+             x:Class="testTask.Views.MachineRelayView">
+  <Grid>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+    
+    <Grid.RowDefinitions>
+      <RowDefinition Height="470"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <ItemsControl Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding ItemsIndexes}" HorizontalAlignment="Left" BorderBrush="Black" VerticalAlignment="Top" >
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <WrapPanel  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"  ItemWidth="170" ItemHeight="80"  Width="845"/>
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <StackPanel  Orientation="Vertical">
+            <Label Classes="bold" Foreground="Black" HorizontalAlignment="Center" Content="{Binding Value1, StringFormat={} Pin {0}}}"/>
+            <ComboBox Width="150" MaxDropDownHeight="100" HorizontalAlignment="Center"    SelectedIndex="{Binding Index}">
+              <ComboBoxItem>Section 1</ComboBoxItem>
+              <ComboBoxItem>Section 2</ComboBoxItem>
+              <ComboBoxItem>Section 3</ComboBoxItem>
+              <ComboBoxItem>Section 4</ComboBoxItem>
+              <ComboBoxItem>Section 5</ComboBoxItem>
+              <ComboBoxItem>Section 6</ComboBoxItem>
+              <ComboBoxItem>Section 7</ComboBoxItem>
+              <ComboBoxItem>Section 8</ComboBoxItem>
+              <ComboBoxItem>Section 9</ComboBoxItem>
+            </ComboBox>
+          </StackPanel>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+
+    <StackPanel  Grid.Column="0" Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0,5">
+      <StackPanel Width="500" Spacing="20" Orientation="Horizontal" Margin="20">
+        <Button Classes="border"  Width="123" Height="64" HorizontalAlignment="Center"
+                   Command="{Binding Clean}">
+          <Image Classes="" Source="avares://testTask/Assets/icons/VehicleTypePage/back-button.png"/>
+        </Button>
+        <Button Classes="border"  Width="123" Height="64" HorizontalAlignment="Center"
+                   Command="{Binding Initial}">
+          <Image Classes="" Source="avares://testTask/Assets/icons/VehicleTypePage/UpArrow64.png"/>
+        </Button>
+      </StackPanel>
+      
+      <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,5">
+        <Label Classes="bold"  VerticalAlignment="Center" Content="Send + Save"/>
+        <Image Classes="" Source="avares://testTask/Assets/icons/MachineModelPage/ToolAcceptChange.png"/>
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</UserControl>

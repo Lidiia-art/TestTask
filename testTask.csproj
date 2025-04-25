@@ -1,0 +1,201 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+    <AvaloniaResource Include="Assets\icons\sideBarIcons\*.png" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaXaml Remove="Assets\Styles\DefaultPage.axaml" />
+    <AvaloniaXaml Remove="Assets\Styles\General.axaml" />
+    <AvaloniaXaml Remove="Assets\Styles\SideBar.axaml" />
+    <AvaloniaXaml Remove="Assets\Styles\SubSection.axaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\icons\DefaultPageIcons\FileOpen.png" />
+    <None Remove="Assets\icons\DefaultPageIcons\FileSave.png" />
+    <None Remove="Assets\icons\DefaultPageIcons\FileSaveAs.png" />
+    <None Remove="Assets\icons\DefaultPageIcons\Trash.png" />
+    <None Remove="Assets\icons\DisplayPage\ABSmooth.png" />
+    <None Remove="Assets\icons\DisplayPage\ABTracks.png" />
+    <None Remove="Assets\icons\DisplayPage\AgIO.png" />
+    <None Remove="Assets\icons\DisplayPage\Boundary.png" />
+    <None Remove="Assets\icons\DisplayPage\ChargingNo.png" />
+    <None Remove="Assets\icons\DisplayPage\ConF_SoundSections.png" />
+    <None Remove="Assets\icons\DisplayPage\ConF_SteerSound.png" />
+    <None Remove="Assets\icons\DisplayPage\ConF_TurnSound.png" />
+    <None Remove="Assets\icons\DisplayPage\HardwareMessage.png" />
+    <None Remove="Assets\icons\DisplayPage\HeadlandOn.png" />
+    <None Remove="Assets\icons\DisplayPage\HydraulicLiftOn.png" />
+    <None Remove="Assets\icons\DisplayPage\RecPath.png" />
+    <None Remove="Assets\icons\DisplayPage\SnapToPivot.png" />
+    <None Remove="Assets\icons\DisplayPage\TramOuter.png" />
+    <None Remove="Assets\icons\DisplayPage\Trash.png" />
+    <None Remove="Assets\icons\DisplayPage\Webcam.png" />
+    <None Remove="Assets\icons\DisplayPage\YouTurnReverse.png" />
+    <None Remove="Assets\icons\DisplayPage\z_LateralManual.png" />
+    <None Remove="Assets\icons\DisplayPage\z_TurnManual.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\Background.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_DirectionMarker.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_ExtraGuides.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_FullScreenBegin.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_Grid.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_Imperial.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_KeyBoard.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_LineSmooth.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_LogElevation.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_Metric.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_Poligons.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_SectionHighlights.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\ConD_Speedometer.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\SvennArrow.png" />
+    <None Remove="Assets\icons\FeatureMenuPage\WindowDayMode.png" />
+    <None Remove="Assets\icons\ImplementAntennaPage\AntennaLeftOffset.png" />
+    <None Remove="Assets\icons\ImplementAntennaPage\AntennaNoOffset.png" />
+    <None Remove="Assets\icons\ImplementAntennaPage\AntennaRightOffset.png" />
+    <None Remove="Assets\icons\ImplementAntennaPage\AntennaTractor.png" />
+    <None Remove="Assets\icons\ImplementHinchPage\RadiusWheelBase.png" />
+    <None Remove="Assets\icons\ImplementOffsetPage\ToolGap.png" />
+    <None Remove="Assets\icons\ImplementOffsetPage\ToolOffsetNegativeLeft.png" />
+    <None Remove="Assets\icons\ImplementOffsetPage\ToolOffsetPositiveRight.png" />
+    <None Remove="Assets\icons\ImplementOffsetPage\ToolOverlap.png" />
+    <None Remove="Assets\icons\ImplementPivotPage\SteerZero.png" />
+    <None Remove="Assets\icons\ImplementPivotPage\ToolHitchPivotOffsetNeg.png" />
+    <None Remove="Assets\icons\ImplementPivotPage\ToolHitchPivotOffsetPos.png" />
+    <None Remove="Assets\icons\ImplementSettingsPage\SectionLookAheadDelay.gif" />
+    <None Remove="Assets\icons\ImplementSettingsPage\SectionLookAheadOff.gif" />
+    <None Remove="Assets\icons\ImplementSettingsPage\SectionOnLookAhead.gif" />
+    <None Remove="Assets\icons\ImplementSwitchPage\AutoSteerOff.png" />
+    <None Remove="Assets\icons\ImplementSwitchPage\HydraulicLiftOff.png" />
+    <None Remove="Assets\icons\ImplementSwitchPage\ManualOff.png" />
+    <None Remove="Assets\icons\ImplementSwitchPage\SectionMasterOff.png" />
+    <None Remove="Assets\icons\ImplementSwitchPage\SwitchActiveClosed.png" />
+    <None Remove="Assets\icons\ImplementSwitchPage\SwitchActiveOpen.png" />
+    <None Remove="Assets\icons\MachineModelPage\ConMa_LiftLowerTime.png" />
+    <None Remove="Assets\icons\MachineModelPage\ConMa_LiftRaiseTime.png" />
+    <None Remove="Assets\icons\MachineModelPage\ConSt_InvertRelay.png" />
+    <None Remove="Assets\icons\MachineModelPage\SwitchOff.png" />
+    <None Remove="Assets\icons\MachineModelPage\ToolAcceptChange.png" />
+    <None Remove="Assets\icons\RollViewPage\ConDa_InvertRoll.png" />
+    <None Remove="Assets\icons\RollViewPage\ConDa_RemoveOffset.png" />
+    <None Remove="Assets\icons\RollViewPage\ConDa_ResetIMU.png" />
+    <None Remove="Assets\icons\RollViewPage\ConDa_RollSetZero.png" />
+    <None Remove="Assets\icons\RollViewPage\ConD_RollHelper.png" />
+    <None Remove="Assets\icons\RollViewPage\DnArrow64.png" />
+    <None Remove="Assets\icons\RollViewPage\UpArrow64.png" />
+    <None Remove="Assets\icons\SettingsStylePage\ToolChkFront.png" />
+    <None Remove="Assets\icons\SettingsStylePage\ToolChkRear.png" />
+    <None Remove="Assets\icons\SettingsStylePage\ToolChkTBT.png" />
+    <None Remove="Assets\icons\SettingsStylePage\ToolChkTrailing.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_ImplementAntenna.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_ImplementConfig2.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_ImplementHitch.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_ImplementHitch2.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_ImplementOffset.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_ImplementPivot.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_ImplementSection.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_ImplementSettings.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_ImplementSwitch.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_ModulesMachine.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_Pins.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_SourcesHeading.png" />
+    <None Remove="Assets\icons\sideBarIcons\ConS_SourcesRoll.png" />
+    <None Remove="Assets\icons\sideBarIcons\Con_Display.png" />
+    <None Remove="Assets\icons\sideBarIcons\Con_FeatureMenu.png" />
+    <None Remove="Assets\icons\sideBarIcons\Con_ImplementMenu.png" />
+    <None Remove="Assets\icons\sideBarIcons\Con_ModulesMenu.png" />
+    <None Remove="Assets\icons\sideBarIcons\Con_SourcesMenu.png" />
+    <None Remove="Assets\icons\sideBarIcons\Con_TramMenu.png" />
+    <None Remove="Assets\icons\sideBarIcons\Con_UTurnMenu.png" />
+    <None Remove="Assets\icons\sideBarIcons\OK64.png" />
+    <None Remove="Assets\icons\SourseHeadingPage\AutoSteerOff.png" />
+    <None Remove="Assets\icons\SourseHeadingPage\Con_SourcesGPSDual.png" />
+    <None Remove="Assets\icons\SourseHeadingPage\Con_SourcesGPSSingle.png" />
+    <None Remove="Assets\icons\SourseHeadingPage\Con_SourcesHead.png" />
+    <None Remove="Assets\icons\SourseHeadingPage\Con_SourcesRTKAlarm.png" />
+    <None Remove="Assets\icons\SubSectionPage\ConT_Asymmetric.png" />
+    <None Remove="Assets\icons\SubSectionPage\ConT_Symmetric.png" />
+    <None Remove="Assets\icons\SubSectionPage\SectionOffBelow.png" />
+    <None Remove="Assets\icons\SubSectionPage\SectionOffBoundary.png" />
+    <None Remove="Assets\icons\SubSectionPage\SectionOnBoundary.png" />
+    <None Remove="Assets\icons\TramMenuPage\ConT_TramOverride.png" />
+    <None Remove="Assets\icons\TramMenuPage\ConT_TramOverrideDisplay.png" />
+    <None Remove="Assets\icons\TramMenuPage\ConT_TramSpacing.png" />
+    <None Remove="Assets\icons\UnitsViewPage\ToolHitchPageFront.png" />
+    <None Remove="Assets\icons\UTurnMenuPage\ConU_UturnDistance.png" />
+    <None Remove="Assets\icons\UTurnMenuPage\ConU_UturnLength.png" />
+    <None Remove="Assets\icons\UTurnMenuPage\ConU_UturnRadius.png" />
+    <None Remove="Assets\icons\UTurnMenuPage\ConU_UTurnSmooth.png" />
+    <None Remove="Assets\icons\VehicleTypePage\AoG.png" />
+    <None Remove="Assets\icons\VehicleTypePage\back-button.png" />
+    <None Remove="Assets\icons\VehicleTypePage\Challenger.png" />
+    <None Remove="Assets\icons\VehicleTypePage\DnArrow64.png" />
+    <None Remove="Assets\icons\VehicleTypePage\JCB.png" />
+    <None Remove="Assets\icons\VehicleTypePage\JohnDeere.png" />
+    <None Remove="Assets\icons\VehicleTypePage\Massey.png" />
+    <None Remove="Assets\icons\VehicleTypePage\NewHolland.png" />
+    <None Remove="Assets\icons\VehicleTypePage\Same.png" />
+    <None Remove="Assets\icons\VehicleTypePage\transparent.jpg" />
+    <None Remove="Assets\icons\VehicleTypePage\TriangleVehicle.png" />
+    <None Remove="Assets\icons\VehicleTypePage\UpArrow64.png" />
+    <None Remove="Assets\icons\VehicleTypePage\vehiclePageArticulated.png" />
+    <None Remove="Assets\icons\VehicleTypePage\vehiclePageHarvester.png" />
+    <None Remove="Assets\icons\VehicleTypePage\vehiclePageTractor.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AnimatedImage.Avalonia" Version="2.0.0" />
+    <PackageReference Include="Avalonia" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
+      <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+      <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+   <ApplicationDefinition Include="Assets\icons\sideBarIcons\Con_VehicleMenu.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Update="Assets\Styles\DefaultPage.axaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Assets\Styles\General.axaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Assets\Styles\SideBar.axaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Assets\Styles\SubSection.axaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Assets/icons/SubSectionPage/ConT_Symmetric.png">
+      <SubType>Image</SubType>
+    </AvaloniaResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\DefaultComponentView.axaml.cs">
+      <DependentUpon>DefaultComponentView.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\ImplementHitchView.axaml" />
+  </ItemGroup>
+</Project>

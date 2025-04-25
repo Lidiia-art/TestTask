@@ -1,0 +1,159 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="580"
+             xmlns:vm="clr-namespace:testTask.ViewModels"
+             Height="580"
+             x:DataType="vm:FeatureMenuViewModel"
+             x:Class="testTask.Views.FeatureMenuView">
+  <Design.DataContext>
+    <vm:FeatureMenuViewModel>
+    </vm:FeatureMenuViewModel>
+  </Design.DataContext>
+
+  <Grid Margin="20,20,0,0">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="180"/>
+      <ColumnDefinition Width="310"/>
+      <ColumnDefinition Width="auto"/>
+    </Grid.ColumnDefinitions>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="420"/>
+      <RowDefinition Height="200"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Spacing="60" Grid.Column="0" Orientation="Horizontal" Margin="0,5">
+      <StackPanel Spacing="" Margin="">
+        <StackPanel Margin="0,5">
+          <ToggleButton  HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+            <Image  Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_Poligons.png"/>
+          </ToggleButton>
+          <Label Content="Polygons" HorizontalAlignment="Center" />
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <ToggleButton  HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+            <Image  Source="avares://testTask/Assets/icons/FeatureMenuPage/WindowDayMode.png"/>
+          </ToggleButton>
+          <Label Content="Brightness" HorizontalAlignment="Center" />
+        </StackPanel>
+
+        <StackPanel Margin="0,5">
+          <ToggleButton  HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+            <Image  Source="avares://testTask/Assets/icons/FeatureMenuPage/Background.png"/>
+          </ToggleButton>
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <ToggleButton  HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+            <Image  Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_LineSmooth.png"/>
+          </ToggleButton>
+          <Label Content="Line Smooth" HorizontalAlignment="Center" />
+        </StackPanel>
+      </StackPanel>
+
+      <StackPanel Spacing="" Margin="">
+        <StackPanel Margin="0,5">
+          <ToggleButton  HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+            <Image Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_Speedometer.png"/>
+          </ToggleButton>
+          <Label Content="Speedo" HorizontalAlignment="Center" />
+        </StackPanel>
+        
+        <StackPanel Margin="0,5">
+          <ToggleButton  HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+            <Image  Source="avares://testTask/Assets/icons/FeatureMenuPage/SvennArrow.png"/>
+          </ToggleButton>
+          <Label Content="Svenn Arrow" HorizontalAlignment="Center" />
+        </StackPanel>
+
+        <StackPanel Margin="0,5">
+          <ToggleButton  HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+            <Image Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_Grid.png"/>
+          </ToggleButton>
+          <Label Content="Grid" HorizontalAlignment="Center" />
+        </StackPanel>
+
+        <StackPanel Margin="0,5">
+          <ToggleButton  HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+            <Image  Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_DirectionMarker.png"/>
+          </ToggleButton>
+          <Label Content="Direction Markers" HorizontalAlignment="Center" />
+        </StackPanel>
+      </StackPanel>
+
+      <StackPanel Orientation="Horizontal">
+        <StackPanel Spacing="" Margin="">
+          <StackPanel Margin="0,5">
+            <ToggleButton  HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+              <Image Stretch="Fill" Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_KeyBoard.png"/>
+            </ToggleButton>
+            <Label Content="Keybord" HorizontalAlignment="Center" />
+          </StackPanel>
+          
+          <StackPanel Margin="0,5">
+            <ToggleButton  HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+              <Image  Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_FullScreenBegin.png"/>
+            </ToggleButton>
+            <Label Content="Start FullScreen" HorizontalAlignment="Center" />
+          </StackPanel>
+
+          <StackPanel Orientation="Horizontal">
+            <StackPanel Margin="0,5">
+              <ToggleButton VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="60" BorderBrush="Black">
+                <Image  Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_ExtraGuides.png"/>
+              </ToggleButton>
+              <Label Content="Extra Guidelines" HorizontalAlignment="Center" />
+            </StackPanel>
+          </StackPanel>
+
+          <StackPanel Margin="0,5">
+            <ToggleButton  HorizontalAlignment="Center" Width="77" Height="60" BorderBrush="Black">
+              <Image Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_SectionHighlights.png"/>
+            </ToggleButton>
+            <Label Content="Sections Lines" HorizontalAlignment="Center" />
+          </StackPanel>
+        </StackPanel>
+        <TextBox  VerticalAlignment="Center" FontSize="35" Text="10" Name="width1"  Width="100" Height="50" TextAlignment="Center" Margin="0,30,0,0"/>
+      </StackPanel>
+      <StackPanel>
+        
+        <StackPanel Margin="0,5" >
+          <ToggleButton  HorizontalAlignment="Center" Width="100" Height="77" BorderBrush="Black">
+            <Image Margin="0,10,0,0" Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_LogElevation.png"/>
+          </ToggleButton>
+          <Label Content="Elevation Log" HorizontalAlignment="Center" />
+        </StackPanel>
+      </StackPanel>
+    </StackPanel>
+    <StackPanel Grid.Column="3" Grid.Row="1">
+      <HeaderedContentControl   Grid.Row="0"   Header="Units" Width="270" Height="122" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+        <StackPanel Spacing="20" Orientation="Horizontal">
+          <RadioButton GroupName="FirstGroup"
+                         Width="112" Height="64">
+            <RadioButton.Template>
+              <ControlTemplate>
+                <Border Name="border" BorderBrush="Black" Background="Transparent"  BorderThickness="1">
+                  <Image Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_Imperial.png" Stretch="UniformToFill" />
+                </Border>
+              </ControlTemplate>
+            </RadioButton.Template>
+          </RadioButton>
+
+          <RadioButton GroupName="FirstGroup"
+                         Width="112" Height="64">
+            <RadioButton.Template>
+              <ControlTemplate>
+                <Border Name="border" BorderBrush="Black" Background="Transparent"  BorderThickness="1">
+                  <Image Source="avares://testTask/Assets/icons/FeatureMenuPage/ConD_Metric.png" Stretch="UniformToFill" />
+                </Border>
+              </ControlTemplate>
+            </RadioButton.Template>
+          </RadioButton>
+        </StackPanel>
+      </HeaderedContentControl>
+    </StackPanel>
+    </Grid>
+</UserControl>
