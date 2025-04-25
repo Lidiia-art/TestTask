@@ -1,12 +1,68 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\testTask\\testTask\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\testTask11\\testTask\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C5185B02-8A48-4020-A0F0-BBB7A8CC6A95}|testTask.csproj|d:\\testtask11\\testtask\\views\\sourcesrollview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{C5185B02-8A48-4020-A0F0-BBB7A8CC6A95}|testTask.csproj|solutionrelative:views\\sourcesrollview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5185B02-8A48-4020-A0F0-BBB7A8CC6A95}|testTask.csproj|d:\\testtask11\\testtask\\views\\sourcesheadingview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{C5185B02-8A48-4020-A0F0-BBB7A8CC6A95}|testTask.csproj|solutionrelative:views\\sourcesheadingview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5185B02-8A48-4020-A0F0-BBB7A8CC6A95}|testTask.csproj|d:\\testtask11\\testtask\\views\\settingsstyleview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{C5185B02-8A48-4020-A0F0-BBB7A8CC6A95}|testTask.csproj|solutionrelative:views\\settingsstyleview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SourcesRollView.axaml",
+              "DocumentMoniker": "D:\\testTask11\\testTask\\Views\\SourcesRollView.axaml",
+              "RelativeDocumentMoniker": "Views\\SourcesRollView.axaml",
+              "ToolTip": "D:\\testTask11\\testTask\\Views\\SourcesRollView.axaml",
+              "RelativeToolTip": "Views\\SourcesRollView.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-25T18:26:26.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SourcesHeadingView.axaml",
+              "DocumentMoniker": "D:\\testTask11\\testTask\\Views\\SourcesHeadingView.axaml",
+              "RelativeDocumentMoniker": "Views\\SourcesHeadingView.axaml",
+              "ToolTip": "D:\\testTask11\\testTask\\Views\\SourcesHeadingView.axaml",
+              "RelativeToolTip": "Views\\SourcesHeadingView.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-25T18:26:24.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SettingsStyleView.axaml",
+              "DocumentMoniker": "D:\\testTask11\\testTask\\Views\\SettingsStyleView.axaml",
+              "RelativeDocumentMoniker": "Views\\SettingsStyleView.axaml",
+              "ToolTip": "D:\\testTask11\\testTask\\Views\\SettingsStyleView.axaml",
+              "RelativeToolTip": "Views\\SettingsStyleView.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-25T18:26:23.069Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="657"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="580"
              xmlns:vm="clr-namespace:testTask.ViewModels"
              x:DataType="vm:MachineRelayViewModel"
              x:Class="testTask.Views.MachineRelayView">
@@ -14,7 +14,7 @@
     </Grid.ColumnDefinitions>
     
     <Grid.RowDefinitions>
-      <RowDefinition Height="520"/>
+      <RowDefinition Height="470"/>
       <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
 
@@ -29,7 +29,7 @@
         <DataTemplate>
           <StackPanel Orientation="Vertical">
             <Label Classes="bold" Foreground="Black" HorizontalAlignment="Center" Content="{Binding Value1, StringFormat={} Pin {0}}}"/>
-            <ComboBox Width="150" MaxDropDownHeight="100" HorizontalAlignment="Center"    SelectedIndex="{Binding Index}">
+            <ComboBox Width="160" MaxDropDownHeight="100" HorizontalAlignment="Center"    SelectedIndex="{Binding Index}">
               <ComboBoxItem>Section 1</ComboBoxItem>
               <ComboBoxItem>Section 2</ComboBoxItem>
               <ComboBoxItem>Section 3</ComboBoxItem>

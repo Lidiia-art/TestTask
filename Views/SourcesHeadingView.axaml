@@ -57,7 +57,7 @@
     <HeaderedContentControl  Grid.Row="1"  Grid.Column="0" IsEnabled="{Binding IsActiveBtn1}" Header="Dual Antenna Settings" Width="350" Height="322" HorizontalAlignment="Left" VerticalAlignment="Bottom">
       <StackPanel Spacing="20">
       <StackPanel Spacing="40" Orientation="Horizontal">
-        <Image Width="64" VerticalAlignment="Top" Height="64" Source="avares://testTask/Assets/icons/SourseHeadingPage/Con_SourcesHead.png"/>
+        <Image Width="100" Height="100" VerticalAlignment="Top" Margin="20,40,0,0"  Source="avares://testTask/Assets/icons/SourseHeadingPage/Con_SourcesHead.png"/>
           <StackPanel  Orientation="Vertical">
             <StackPanel>
             <Label  Foreground="Black" Content="Heading Offset Degree:"  HorizontalAlignment="Center" VerticalAlignment="Center"/>

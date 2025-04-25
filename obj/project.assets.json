@@ -1527,11 +1527,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\testTask\\testTask\\testTask.csproj",
+      "projectUniqueName": "D:\\testTask11\\testTask\\testTask.csproj",
       "projectName": "testTask",
-      "projectPath": "D:\\testTask\\testTask\\testTask.csproj",
+      "projectPath": "D:\\testTask11\\testTask\\testTask.csproj",
       "packagesPath": "C:\\Users\\Lidiia_Art\\.nuget\\packages\\",
-      "outputPath": "D:\\testTask\\testTask\\obj\\",
+      "outputPath": "D:\\testTask11\\testTask\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

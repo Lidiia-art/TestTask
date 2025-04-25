@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lvgqfopizEI=",
+  "dgSpecHash": "uDvp9pCJGz4=",
   "success": true,
-  "projectFilePath": "D:\\testTask\\testTask\\testTask.csproj",
+  "projectFilePath": "D:\\testTask11\\testTask\\testTask.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lidiia_Art\\.nuget\\packages\\animatedimage.avalonia\\2.0.0\\animatedimage.avalonia.2.0.0.nupkg.sha512",
     "C:\\Users\\Lidiia_Art\\.nuget\\packages\\avalonia\\11.2.1\\avalonia.11.2.1.nupkg.sha512",

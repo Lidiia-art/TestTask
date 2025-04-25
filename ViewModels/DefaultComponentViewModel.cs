@@ -52,14 +52,14 @@ namespace testTask.ViewModels
         }
 
         [RelayCommand]
-        private void Clean()
+        public void Clean()
         {
             items.Clear();
         }
 
 
         [RelayCommand]
-        private void AddItem(string? newItem)
+        public void AddItem(string? newItem)
         {
             if (!string.IsNullOrWhiteSpace(newItem))
             {
