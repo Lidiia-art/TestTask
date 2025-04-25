@@ -89,8 +89,8 @@
       </StackPanel>
     </StackPanel>
     
-    <StackPanel Spacing="250"  Orientation="Horizontal" Margin="50,70,0,0">
-      <StackPanel>
+    <StackPanel Spacing="250"  Orientation="Horizontal" Margin="50,30,0,0">
+      <StackPanel VerticalAlignment="Center">
         <StackPanel Spacing="40" Orientation="Horizontal">
           <Label Classes="bold" Content="Less"/>
           <Label Classes="bold" Content="Roll Filter"/>
