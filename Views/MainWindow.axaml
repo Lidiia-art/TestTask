@@ -6,7 +6,7 @@
         mc:Ignorable="d" d:DesignWidth="950" d:DesignHeight=""
         x:Class="testTask.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Width="1000"
+        Width="960"
         Height="650"
         Background="Ivory"
         Icon="/Assets/avalonia-logo.ico"
